@@ -1,0 +1,18 @@
+<div class="block--top-actions">
+    <h1 class="block--top-actions__title">
+       Add Topic to <span>{{controllers.course.title}}</span>
+    </h1>
+    {{partial 'topics/form'}}
+    <div class="bottom-actions clearfix form--compacted__bottom-actions">
+        <div>
+            <button type="submit" {{action "createRecord" this}} {{bind-attr class=":btn :btn-success :ts-topic-sumbitNewButton content.isSaving:disabled"}}>
+                {{#if content.isSaving}}
+                    Adding Topic...
+                {{else}}
+                    Add Topic
+                {{/if}}
+            </button>
+            {{#link-to "topics" class="btn"}}Cancel{{/link-to}}
+        </div>
+    </div>
+</div>

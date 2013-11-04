@@ -1,0 +1,1 @@
+Openedui.GradesController = Ember.ObjectController.extend()

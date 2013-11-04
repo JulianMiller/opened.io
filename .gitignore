@@ -1,0 +1,11 @@
+node_modules
+libpeerconnection.log
+temp
+heroku/dist
+heroku/.git
+.sass-cache
+.tmp
+.idea/*
+*.iml
+.DS_Store
+npm-debug.log

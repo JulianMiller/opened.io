@@ -1,0 +1,16 @@
+<div class="block--top-actions">
+    <h1 class="block--top-actions__title">New Playlist</h1>
+    <form class="form-horizontal form--compacted" {{action create on="submit"}}>
+        {{#if errorMessage}}
+            <div class="alert alert-error">{{errorMessage}}</div>
+        {{/if}}
+        <div class="control-group">
+            <label class="control-label ts-playlist-name">Playlist Name</label>
+            <div class="controls">
+                {{input value=name type="text" autofocus="true" required="true" class="span7 ts-playlist-inputName"}}
+                <button class="btn btn-success ts-playlist-create" {{action "create"}}>Create</button>
+            </div>
+        </div>
+    </form>
+
+</div>

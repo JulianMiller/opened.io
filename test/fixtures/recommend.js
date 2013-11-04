@@ -1,0 +1,1 @@
+Openedui.Recommend.FIXTURES = []

@@ -1,0 +1,21 @@
+<div class="top-actions">
+    <div class="btn-group">
+        {{#link-to "topics" course.id class="btn btn-small btn-inverse"}}<i class="icon-arrow-left"></i> Back to Course{{/link-to}}
+    </div>
+    <!--<div class="btn-group">
+        <button class="btn btn-small"><i class="icon-plus"></i> Search &amp; Assign Resources</button>
+    </div>-->
+    <div class="btn-group pull-right">
+        <button class="btn btn-small" {{action "discardChanges" this}} {{bind-attr disabled=isNotDirty}}>Discard Changes</button>
+        <button title="Delete Topic" class="btn btn-small ts-topic-deleteButton" {{action "deleteRecord" this}}><i class="icon-trash text--normal"></i> Delete Topic</button>
+    </div>
+    <div class="btn-group pull-right">
+        <button type="submit" {{action "saveChanges" this}} {{bind-attr disabled=isNotDirty}} {{bind-attr class=":btn :btn-success :btn-small isLoading:disabled"}}>
+			{{#if isLoading}}
+                Saving...
+			{{else}}
+                Save Changes
+			{{/if}}
+        </button>
+    </div>
+</div>

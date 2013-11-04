@@ -1,0 +1,16 @@
+{
+  "name": "opened-web",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "handlebars": "~1.0.0",
+    "ember": "1.0.0-rc.8",
+    "bootstrap-sass": "~2.3.1",
+    "font-awesome": "~3.2.1",
+	"jquery-mockjax": "*",
+	"jasmine-jquery": "*",
+	"momentjs": "~2.0.0",
+	"fancybox": "~2.1.5"
+  },
+  "devDependencies": {}
+}

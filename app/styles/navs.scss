@@ -1,0 +1,159 @@
+@import "vars";
+@import "compass";
+@import "mixins";
+
+/********************************************************
+
+		general navigation, putting links in one row
+
+		<ul class="nav-links">
+			<li class="nav-links__item"><a class="nav-links__link">About</a></li>
+			<li class="nav-links__item"><a class="nav-links__link">Twitter</a></li>
+			<li class="nav-links__item"><a class="nav-links__link">Blog</a></li>
+        </ul>
+
+
+********************************************************/
+
+.nav-links {
+	@extend .clearfix !optional;
+	margin: 0;
+	list-style: none;
+}
+
+.nav-links__item {
+	float: left;
+	margin: 0 4px 0 0;
+	padding: 0 2px 0 0;
+}
+
+.nav-links__link {
+	display: block;
+}
+
+/********************************************************
+
+		application top links
+		@extend .nav-links
+
+********************************************************/
+
+.app-header-spe-links {
+	@extend .nav-links;
+	position: relative;
+	z-index: 1;
+}
+
+.app-header-spe-links__item {
+	@extend .nav-links__item;
+	margin: 0;
+}
+
+.app-header-spe-links__link {
+	@extend .nav-links__link;
+	font: 13px Arial, sans-serif;
+	color: #fff;
+	margin: 0 0 0 9px;
+	padding: 0 0 0 9px;
+	border-left: 1px solid #8c3c20;
+	&:hover {
+		cursor: pointer;
+		color: #fbbda4;
+	}
+}
+
+.app-header-spe-links__item:first-child {
+	.app-header-spe-links__link {
+		margin-left: 0;
+		padding-left: 0;
+		border-left: none;
+	}
+}
+
+/*****************************************************
+
+		list with blocks
+		e.g. courses list
+
+		<ul class="list__blocks">
+			<li class="list__blocks__item">
+				<a class="list__blocks__link">
+					<h2 class="list__blocks__title"> </h2>
+                    <span class="list__blocks__desc"> </span>
+				</a>
+			</li>
+		</ul>
+
+*****************************************************/
+
+.list__blocks {
+	margin: 0;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.list__blocks__item {
+	list-style: none;
+	display: block;
+}
+
+.list__blocks__link {
+	display: block;
+	padding: 4px 10px;
+	background: #f6f6f6;
+	border-bottom: 1px solid #e5e5e5;
+	border-top: 1px solid #fff;
+	cursor: pointer;
+	&:hover {
+		background: #eeeeee;
+		text-decoration: none;
+	}
+	&.loading,
+	&.active {
+		background: $selected_color;
+		//border-color: darken($selected_color, 5%);
+		//border-top-color: darken($selected_color, 8%);
+		//@include box-shadow(inset 0px 3px 6px -2px rgba(157, 157, 50, 0.04));
+		text-decoration: none;
+	}
+}
+
+.list__blocks__title {
+	font-size: 15px;
+	line-height: 1;
+	margin: 4px 0;
+}
+
+.list__blocks__desc {
+	color: #666;
+	font-size: 13px;
+	text-decoration: none;
+	margin-bottom: 1px;
+	line-height: 1.45;
+}
+
+.list__blocks__desc .inline-col {
+	min-height: 0;
+}
+
+/********************************************************
+
+		sortable variation
+
+		<ul class="list__blocks">
+			<li class="list__blocks__item" draggable="true">
+				<a class="list__blocks__link">
+					<h2 class="list__blocks__title"></h2>
+                    <span class="list__blocks__desc"></span>
+				</a>
+			</li>
+		</ul>
+
+
+********************************************************/
+
+.list__blocks__item[draggable="true"]{
+	.list__blocks__link{
+		padding-left: 28px;
+	}
+}

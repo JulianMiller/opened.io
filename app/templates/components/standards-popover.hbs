@@ -1,0 +1,12 @@
+{{#if idents}}
+	<ul class="nav-links">
+		{{#if title}}<li class="nav-links__item text--subtle">{{title}}</li>{{/if}}
+		{{#each identifier in idents}}
+			<li class="nav-links__item">
+				<span class="activate-popover text--abbr" {{bind-attr data-standard=identifier}}>
+					{{identifier}}
+				</span>
+			</li>
+		{{/each}}
+	</ul>
+{{/if}}

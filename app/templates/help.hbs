@@ -1,0 +1,37 @@
+<div class="row-fluid">
+    <div class="span6">
+
+		<div class="block">
+			<div class="block__header">
+                <h1 class="block__title page__title">Help Videos</h1>
+			</div>
+			<div class="block__content">
+				{{partial "help/videos"}}
+                {{outlet "modal"}}
+			</div>
+		</div>
+
+    </div>
+
+    <div class="span6">
+
+        <div class="block">
+            <div class="block__header">
+                <h1 class="block__title page__title">Frequently Asked Questions</h1>
+            </div>
+            <div class="block__content">
+				{{view Openedui.HelpFaqView}}
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="block__header">
+                <h4 class="block__title">Ask Us Anything</h4>
+            </div>
+            <div class="block__content">
+				{{partial "help/form"}}
+            </div>
+        </div>
+
+    </div>
+</div>

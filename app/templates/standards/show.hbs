@@ -1,0 +1,7 @@
+<li>
+  {{#link-to "standard_resources" controllers.standard_group.id controllers.category.id standard.id activeClass="tree-active__link"}}
+    <span {{bind-attr title="standard.label"}}>{{truncate standard.label len=90}}
+		<span class="text--subtle">({{standard.format_count}})</span>
+	</span>
+  {{/link-to}}
+</li>

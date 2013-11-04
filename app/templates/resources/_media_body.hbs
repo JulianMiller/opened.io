@@ -1,0 +1,47 @@
+<!-- resource actions -->
+<div class="btn-group pull-right resource__actions">
+	{{partial "resources/media_actions"}}
+</div>
+
+<!-- resource headers and description -->
+<h1 class="media-heading resource__title">
+    {{#if isHelpVideo}}
+        <a href="#" {{action "openModal" this}}>{{title}}</a>
+    {{else}}
+        {{#linkTo "resource" this}}
+            {{#unless embeddable}}<i class="icon-external-link-sign"></i>{{/unless}}
+            {{title}}
+        {{/linkTo}}
+    {{/if}}
+</h1>
+
+<h2 class="resource__subtitle">
+	{{contribution_name}}
+</h2>
+
+<p class="resource-desc__text">
+	{{truncate description len=280}}
+</p>
+
+<!--  standards and grades-->
+{{standards-popover idents=standard_idents title="Standards:"}}
+
+{{#if grades_range}}
+    <ul class="nav-links">
+      <li class="nav-links__item text--subtle">Grades:</li>
+  		<li class="nav-links__item">{{grades_range}}</li>
+    </ul>
+{{/if}}
+
+{{#if rating}}
+  <ul class="nav-links">
+    {{star-rating value=rating title="Rating:"}}
+    {{#if isSignedIn}}
+      {{#if my_rating}}
+        {{star-rating autoHide=true value=my_rating title="Your Rating:"}}      
+      {{else}}
+        {{star-rating autoHide=true readOnly=false value=my_rating title="Your Rating:" resourceId=id}}
+      {{/if}}
+    {{/if}}
+  </ul>
+{{/if}}

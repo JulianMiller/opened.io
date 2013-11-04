@@ -1,0 +1,32 @@
+{{#if topicResource}}
+	{{#unless isAssigned}}
+        <button type="submit" {{action assignResource id}}  {{bind-attr class=":btn :btn-success :btn-small isLoading:disabled"}}>
+            {{#if isLoading}}
+                <i class="icon-spinner icon-spin text--normal"></i> Loading...
+            {{else}}
+                Assign to Topic
+            {{/if}}
+        </button>
+	{{else}}
+        <button type="submit" {{action removeResource id}}  {{bind-attr class=":btn :btn-small isLoading:disabled"}}>
+            {{#if isLoading}}
+                <i class="icon-spinner icon-spin text--normal"></i> Loading...
+            {{else}}
+                Remove from Topic
+            {{/if}}
+        </button>
+	{{/unless}}
+{{/if}}
+
+{{#if isSignedIn}}
+    {{#if displayRemoveFromPlaylistButton}}
+        <button class="btn btn-small" {{action "removeFromPlaylist" id }}>
+            <i class="icon-minus" title="Remove from Playlist"></i>
+        </button>
+    {{/if}}
+    {{#if displayAddToPlaylistButton}}
+        <button {{action "addToPlaylist" this}} class="btn btn-small">
+            <i class="icon-plus" title="Add to Playlist"></i>
+        </button>
+    {{/if}}
+{{/if}}

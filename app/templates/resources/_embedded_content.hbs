@@ -1,0 +1,17 @@
+{{#unless isHelpVideo}}
+    <h2 class="resource__subtitle">
+        {{contribution_name}}
+    </h2>
+    <form class="form-inline">
+        <div class="btn-group">
+            <a class="btn btn-small" {{bind-attr href="fbook_url"}} target="_blank"><i class="icon-facebook"></i> Facebook</a>
+            <a class="btn btn-small" {{bind-attr href="tweet_url"}} target="_blank"><i class="icon-twitter"></i> Twitter</a>
+            <a class="btn btn-small" {{bind-attr href="mailto_url"}}><i class="icon-envelope"></i> Email</a>
+        </div>
+        <div class="btn-group">
+            <input class="input-xlarge ts-resource-content-input" type="text" autofocus="autofocus" {{bind-attr value="share_href"}} />
+        </div>
+    </form>
+{{/unless}}
+
+<iframe {{bind-attr src="embed_url"}} width="740" height="460" frameborder="0" allowfullscreen class="ts-resource-content"></iframe>

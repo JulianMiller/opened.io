@@ -1,0 +1,28 @@
+{{#if playlists}}
+    <form class="form-horizontal form--compacted msg">
+		<div class="control-group">
+			<label class="control-label">Select Playlist</label>
+			<div class="controls">
+				{{view Ember.Select
+					contentBinding="playlists"
+					optionValuePath="content.id"
+					optionLabelPath="content.name"
+					selectionBinding="selectedPlaylist"
+				}}
+			</div>
+		</div>
+	</form>
+    {{#if selectedPlaylist}}
+          {{#each item in controller}}
+              {{render "resources/show" item}}
+          {{else}}
+              <p class="msg msg--empty">You have no resources in the selected playlist.</p>
+          {{/each}}
+    {{/if}}
+{{else}}
+    <div class="msg msg--empty">
+        <p>
+           You have not created a playlist yet.
+        </p>
+    </div>
+{{/if}}

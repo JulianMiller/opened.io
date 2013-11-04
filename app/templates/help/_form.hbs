@@ -1,0 +1,22 @@
+<form {{action "ask" on="submit" }}>
+    {{#unless isSignedIn}}
+        <div class="controls">
+            {{input type="email" value=email  placeholder="Your Email" class="ts-help-email"}}
+        </div>
+    {{/unless}}
+    {{#if notice}}
+        <p class="text-success ts-help-notice">{{notice}}</p>
+    {{/if}}
+    <div class="controls">
+        {{view Ember.TextArea
+            valueBinding="question"
+            class="ts-help-question field span12"
+            rows="8"
+            required="true"
+        }}
+    </div>
+    <div class="controls form-inline">
+        <button type="submit" class="btn btn-success ts-help-button">Submit question</button>
+        <label> or send email to <a href="mailto:support@opened.io">support@opened.io</a></label>
+    </div>
+</form>

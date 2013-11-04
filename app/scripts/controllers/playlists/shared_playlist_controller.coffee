@@ -1,0 +1,1 @@
+Openedui.SharedPlaylistController = Ember.ObjectController.extend()

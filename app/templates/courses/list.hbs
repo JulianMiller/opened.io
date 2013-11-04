@@ -1,0 +1,27 @@
+<ul class="list__blocks">
+	{{#if content.isUpdating}}
+        <p class="msg msg--empty">
+            <i class="icon-spinner icon-spin"></i> Loading Courses...
+        </p>
+	{{else}}
+		{{#each course in controller}}
+            <li class="list__blocks__item ts-course-list-item">
+				{{#link-to "topics" course.id class="list__blocks__link" currentWhen="course" }}
+                    <div class="list__blocks__header">
+                        <h2 {{bind-attr title=course.title}} class="list__blocks__title">{{ truncate course.title len=37 }}&nbsp;</h2>
+                    </div>
+                    <p class="list__blocks__desc">
+                        <span>{{ course.standard_group.title }}</span>
+                        <span class="inline-col span4 text--subtle pull-right">{{! dateFormat course.created_at }}</span>
+                    </p>
+                    <p class="list__blocks__desc">
+                        Grade:&nbsp;{{ course.grade }}
+                    </p>
+                    <p class="list__blocks__desc text--subtle">
+						{{ truncate course.description len=56 }}&nbsp;
+                    </p>
+				{{/link-to}}
+            </li>
+		{{/each}}
+	{{/if}}
+</ul>

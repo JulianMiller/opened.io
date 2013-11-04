@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OpenEd</title>
+
+        <!-- build:css styles/font-awesome.css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+        <!-- endbuild -->
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/style.css">
+        <!-- endbuild -->
+
+        <link rel="shortcut icon" href="images/favicon.ico" />
+
+</head>
+    <body>
+
+    <!--[if lt IE 10]>
+        <div class="msg--warning">
+            <h1>Sorry, but your browser is not supported</h1>
+            <p>Your browser is not supported by us right now, but we are working hard to fix it.</p>
+            <p>Please check out our site later or consider <a href="http://browser-update.org/en/update.html">upgrating your browser</a>.</p>
+
+        </div>
+    <![endif]-->
+
+    <!-- build:js scripts/components.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/handlebars/handlebars.runtime.js"></script>
+        <script src="bower_components/ember/ember.js"></script>
+        <script src="custom_components/ember-data.js"></script>
+        <script src="custom_components/jquery.xdr.js"></script>
+        <script src="custom_components/ember-ipad-patch.js"></script>
+
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/handelbars_helpers.js -->
+        <script src="scripts/handlebars_helpers.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/templates.js -->
+        <script src="scripts/compiled-templates.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js(.tmp) scripts/main.js -->
+        <script src="scripts/combined-scripts.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/momentjs/min/moment.min.js"></script>
+        <script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+        <!--<script src="bower_components/jquery.sticky/jquery.sticky.js"></script>-->
+
+        <!--script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script> -->
+        <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
+        <!--<script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>-->
+        <!-- <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script> -->
+        <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
+        <!-- <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script> -->
+        <!-- endbuild -->
+</body>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33721862-2']);
+  _gaq.push(['_setDomainName', 'opened.io']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  var fb_param = {};
+  fb_param.pixel_id = '6007960487659';
+  fb_param.value = '0.00';
+  fb_param.currency = 'USD';
+  (function(){
+    var fpw = document.createElement('script');
+    fpw.async = true;
+    fpw.src = ('file:' == document.location.protocol ? 'https:' : '') + '//connect.facebook.net/en_US/fp.js';
+    var ref = document.getElementsByTagName('script')[0];
+    ref.parentNode.insertBefore(fpw, ref);
+  })();
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6007960487659&amp;value=0&amp;currency=USD" /></noscript>
+
+</html>

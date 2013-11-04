@@ -1,0 +1,31 @@
+/********************************************************
+
+		popup styles
+
+<div class="popup">
+  <div class="popup__header clearfix">
+    <h1 class="popup__title title-style-h3 pull-left">{{title}}</h1>
+    <button {{action close}} class="popup__close">× Close</button>
+  </div>
+  <div class="popup__content">
+
+  </div>
+</div>
+
+
+********************************************************/
+.popup__header{
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.popup__title{
+	padding-right: 200px;
+}
+
+.popup__close{
+	position: absolute;
+	right: 0;
+	top: 0;
+	//padding: 2px 7px 3px;
+}

@@ -1,0 +1,15 @@
+<li {{bind-attr id="id"}} {{bind-attr class=":resource :media :ts-resource-item isSelected:resource--selected"}}>
+    {{#if isHelpVideo}}
+        <a href="#" {{action "openModal" this}}>
+            <img class="media-object resource-pic__img" {{bind-attr src="thumb"}}/>
+        </a>
+    {{else}}
+        {{#linkTo "resource" this}}
+            <img class="media-object resource-pic__img" {{bind-attr src="thumb"}}/>
+        {{/linkTo}}
+    {{/if}}
+
+	<div class="media-body">
+	  {{partial "resources/media_body"}}
+	</div>
+</li>

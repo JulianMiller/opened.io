@@ -1,0 +1,33 @@
+/********************************************************
+
+		msg holders
+
+********************************************************/
+.msg {
+	padding: 10px;
+	background: #f4f6f8;
+	color: #939393;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.msg--empty {
+	@extend .msg;
+	border: 5px solid #fafafa;
+	background: #fff;
+	padding: 20px 20%;
+	color: #aaa;
+	margin: 0;
+}
+
+.msg--success {
+	@extend .msg;
+	color: #51a351;
+	background: #f8f8ee;
+}
+
+.msg--warning {
+	@extend .msg;
+	color: #111;
+	background: #fffae5;
+}

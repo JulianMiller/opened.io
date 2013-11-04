@@ -1,0 +1,11 @@
+{{#with controllers.resources}}
+  {{#if model.isLoaded}}
+    <ul class="resource__list">
+    {{#each resource in model}}
+      {{render "resources/show" resource}}
+    {{/each}}
+    </ul>
+  {{else}}
+    {{partial "spinner"}} Loading Resources...
+  {{/if}}
+{{/with}}

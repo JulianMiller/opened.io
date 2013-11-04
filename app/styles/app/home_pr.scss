@@ -1,0 +1,88 @@
+@import "../mixins";
+/********************************************************
+
+			home promo area
+			see html at index.hbs
+
+
+********************************************************/
+
+.home-pr{
+	margin-bottom: 30px;
+}
+
+.home-pr__center{
+	position: relative;
+	height: 550px;
+}
+
+.home-pr__subtitle{
+	font-size: 14px;
+	line-height: 1;
+	color: #666;
+	margin: 7px 0;
+	text-align: center;
+}
+
+.home-pr__title{
+	font-size: 40px;
+	line-height: 1;
+	margin: 5px 0 3px;
+	letter-spacing: 0.04em;
+	text-align: center;
+}
+
+.home-pr__block{
+	width: 23%;
+	position: absolute;
+	z-index: 1;
+	.media-heading{
+		font-weight: normal;
+		a{
+			font-weight: bold;
+		}
+	}
+}
+
+.home-pr__block > .media{
+	padding: 10px;
+}
+
+.home-pr__header{
+	margin-bottom: 20px;
+}
+
+.home-pr__block--mid__img{
+	display: block;
+	margin: 0 auto;
+	padding: 5px;
+	position: relative;
+}
+
+.home-pr__block--mid{
+	width: 40%;
+	position: absolute;
+	margin-left: 30%;
+	z-index: 0;
+}
+
+.home-pr__block--top1{
+	top: 15px;
+	left: 18%;
+}
+
+.home-pr__block--top2{
+	top: 131px;
+	right: 5%;
+}
+
+.home-pr__block--bot1{
+	top: 243px;
+	left: 6%;
+}
+
+.home-pr__block--bot2{
+	top: 410px;
+	right: 14%;
+	width: 26%;
+}

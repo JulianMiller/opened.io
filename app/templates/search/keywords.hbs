@@ -1,0 +1,11 @@
+<div class="controls">
+  <form class="input-append" {{action "keywordSearch" on="submit"}}>
+    {{view Ember.TextField
+      valueBinding="descriptive"
+      classNames="input-keyword input-xxlarge"
+      placeholder="Search by Keyword (e.g. quadratic equations, Latin affixes, photosynthesis)"}}
+    <button {{action "keywordSearch"}} class="btn" type="submit" title="Find Resources">
+      <i class="icon-search"></i>
+    </button>
+  </form>
+</div>

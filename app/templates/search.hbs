@@ -1,0 +1,13 @@
+<div class="row-fluid">
+  <div class="span4">
+    {{outlet "column"}}
+    {{outlet}}
+    {{outlet "playlists"}}
+  </div>
+  <div class="span8">
+    {{partial "search/keywords"}}
+    {{partial "grades/list"}}
+    {{partial "search/filters"}}
+    {{partial "resources/list"}}
+  </div>
+</div>

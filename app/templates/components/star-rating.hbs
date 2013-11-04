@@ -1,0 +1,20 @@
+
+<li {{bind-attr class=":nav-links__item :text--subtle autoHide:resource__actions"}}>
+  {{title}}
+</li>
+
+<li class="nav-links__item">
+  <ul {{bind-attr class=":rating readOnly::rating--dynamic autoHide:resource__actions"}}>
+
+    {{#each star in stars}}
+      <li class="rating__star" {{action 'submit' star}}>
+        <i {{bind-attr class="star.isOn:icon-star:icon-star-empty"}}></i>
+      </li>
+    {{/each}}
+    {{#if message}}
+      <li class="nav-links__item">
+        <span class="msg--success">{{message}}</span>
+      </li>
+    {{/if}}
+  </ul>
+</li>

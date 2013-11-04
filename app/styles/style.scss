@@ -1,0 +1,120 @@
+@import "bootswatch-scss/united/_variables";
+@import "bootstrap-sass/lib/bootstrap";
+
+@import "bootswatch-scss/united/_bootswatch";
+@import 'font-awesome/scss/font-awesome.scss';
+@import "elements";
+
+
+/********************************************************
+
+	Should use yahoo grids, which based on display-inline property
+	because ember generates a lot of <script> metamorph tags
+	which blocks bootstrap :first-child selector
+
+	see more at http://yuilibrary.com/yui/docs/cssgrids/
+
+********************************************************/
+@import "grids";
+
+@import "blocks";
+@import "navs";
+@import "forms";
+@import "utils";
+@import "popup";
+@import "msgs";
+
+// plugings
+@import "jquery.fancybox/jquery.fancybox";
+
+
+@import "app/header";
+
+// home page promo area
+@import "app/home_pr";
+
+
+/*****************************************************
+
+			custom application styles
+
+
+*****************************************************/
+html{
+	background: #f2f2f2;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
+}
+
+/********************************************************
+
+			main layout styles
+
+********************************************************/
+
+.main-container{
+	background: #fff;
+	margin-bottom: 60px;
+	min-height: 300px;
+}
+.app-footer{
+	padding: 20px 0;
+	background: #f2f2f2;
+}
+
+.app-footer__copy{
+	color: #999;
+	font-size: 90%;
+}
+
+/********************************************************
+
+        some bootstrap overwrites
+
+********************************************************/
+.nav-tabs > li > a{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: darken($linkColor, 9%);
+	text-align: center;
+	margin: 0;
+}
+
+.navbar .nav > li > .active{
+	background-color: #9c3621;
+	border-color:transparent;
+	text-shadow: none;
+}
+
+.navbar .nav > li > a:hover{
+	background-color: darken($header_first_color_stop, 7%);
+}
+
+hr{
+	margin: 15px 0;
+	border-top-color: #ececec;
+}
+
+// overwrite with responsive styles
+@import "bootstrap-sass/lib/responsive";
+
+
+/*
+	reset margin for bootstrap layout, it needful coz ember
+ 	generate <script> tags and we can't use :first-child selector
+*/
+
+.row-fluid .span--first{
+	margin-left: 0;
+}
+
+/*
+  	remove min-height: 30px from the layout span
+*/
+
+.row-fluid .inline-col {
+	vertical-align: middle;
+	min-height: 0;
+}

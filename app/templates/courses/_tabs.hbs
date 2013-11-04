@@ -1,0 +1,9 @@
+<div class="tabs-layout">
+    <ul class="nav nav-tabs tabs-layout__tabs">
+        {{#link-to "topics" currentWhen="topics" tagName="li"}}<a href="topics" {{bind-attr href="view.href"}}>Topics</a>{{/link-to}}
+        {{#link-to "classes" tagName="li"}}<a href="#classes" {{bind-attr href="view.href"}}>Classes</a>{{/link-to}}
+    </ul>
+    <div class="tab-content tabs-layout__content">
+        {{outlet}}
+    </div>
+</div>

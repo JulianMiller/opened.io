@@ -1,0 +1,22 @@
+{{view Openedui.SortableView
+	contentBinding=controller
+	tagName='ul'
+	class='list__blocks ts-topic-list'
+	itemViewTemplateName='topics/list_item'
+}}
+
+
+{{#unless content}}
+	<div class="msg msg--empty">
+		<p>
+			{{#link-to 'topics.new'}}Provide individual topics{{/link-to}} to cover in the course. A topic is
+			often the subject for a day's lecture,
+			reading or viewing. It often aligns to a single standard (but its not required).
+		</p>
+
+		<p>
+			You can associate zero or more resources with each topic.
+			Student View lets you see how your students will view your list of topics
+		</p>
+	</div>
+{{/unless}}

@@ -1,0 +1,7 @@
+{{#linkTo 'areas'}}<i class="icon-arrow-left"></i> Back to Areas{{/linkTo}}
+<h4>{{controllers.area.title}}</h4>
+<ul class="nav nav-list">
+  {{#each subject in controller}}
+    {{partial "subjects/show"}}
+  {{/each}}
+</ul>

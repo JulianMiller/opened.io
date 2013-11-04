@@ -1,0 +1,4 @@
+{
+	"API_HOST": "https://api.opened.io",
+	"HEROKU_GIT": "git@heroku.com:openedui-prod.git"
+}

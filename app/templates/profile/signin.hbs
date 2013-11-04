@@ -1,0 +1,41 @@
+<!-- login page template /profile/login/ -->
+
+<div class="page__header">
+	<h1 class="page__title">Sign In</h1>
+</div>
+<form class="form-horizontal form--stand-alone" {{action signin on="submit"}}>
+	{{#if errorMessage}}
+	   <div class="alert alert-error">{{errorMessage}}</div>
+	{{/if}}
+	<div class="control-group">
+		<label {{bind-attr for="view.sEmail.elementId"}} class="control-label">Email</label>
+		<div class="controls">
+			{{view Ember.TextField viewName="sEmail" class="ts-signin-email" valueBinding="email" type="email" autofocus="true" required="true"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label {{bind-attr for="view.sPassword.elementId"}}  class="control-label">Password</label>
+		<div class="controls">
+			{{view Ember.TextField viewName="sPassword" class="ts-signin-password" valueBinding="password" type="password" required="true"}}
+			<span class="help-block">{{#linkTo "profile.forgot_password"}}Forgot your password?{{/linkTo}}</span>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" {{bind-attr class=":btn :btn-success :btn-large :ts-signin-signinButton isLoading:disabled"}}>
+				{{#if isLoading}}
+                    Entering OpenEd...
+				{{else}}
+                    Sign In
+				{{/if}}
+			</button>
+		</div>
+	</div>
+</form>
+
+<p class="form-horizontal__help">{{#linkTo "profile.signup"}}Don't have an Account? Create new one{{/linkTo}}</p>
+
+
+
+
+

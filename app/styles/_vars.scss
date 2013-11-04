@@ -1,0 +1,30 @@
+/*****************************************************
+
+			application variables / settings
+
+*****************************************************/
+
+// application colors
+$orange: #DD4814 !default;
+
+$selected_color: #dce9ff;
+$linkColor: $orange !default;
+$linkColorHover: darken($linkColor, 15%) !default;
+
+//header
+
+$header_row_secondary_color: #c53f12;
+$header_first_color_stop: #d04a16;
+$header_second_color_stop: #dd4814;
+
+$header_inners_border_left: 1px solid rgba(255,255,255,0.2);
+$header_inners_border_right: 1px solid rgba(0,0,0,0.2);
+
+$page_title_font_size: 22px;
+
+/*****************************************************
+
+			blocks settings
+
+*****************************************************/
+$block_margin_bottom: 10px;

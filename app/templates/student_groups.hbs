@@ -1,0 +1,19 @@
+<div class="page__header">
+    <h1 class="page__title">Classes</h1>
+    <div class="page__actions">
+        {{#link-to "student_groups.join" class="btn"}}Join class{{/link-to}}
+    </div>
+</div>
+
+<div class="yui3-g yui3-cols">
+    <div class="yui3-u-7-24">
+        <div class="yui3-u-cnt">
+            {{partial "student_groups/list"}}
+        </div>
+    </div>
+    <div class="yui3-u-17-24">
+        <div class="yui3-u-cnt">
+            {{outlet}}
+        </div>
+    </div>
+</div>

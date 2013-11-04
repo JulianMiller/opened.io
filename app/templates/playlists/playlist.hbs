@@ -1,0 +1,37 @@
+<div class="block--top-actions">
+
+    <h1 class="block--top-actions__title title-style-h2 ts-playlist-title">{{name}}</h1>
+
+    {{#if isEditing}}
+        <form class="form-horizontal form--compacted" {{action update on="submit"}}>
+            {{#if errorMessage}}
+                <div class="alert alert-error">{{errorMessage}}</div>
+            {{/if}}
+            <div class="control-group">
+                <label class="control-label">Playlist Name</label>
+                <div class="controls">
+                    {{input value=name type="text" autofocus="true" required="true" class="input-xlarge ts-playlist-updateName"}}
+                </div>
+            </div>
+        </form>
+    {{/if}}
+
+    <div class="top-actions">
+		<div class="pull-right">
+			{{#if isEditing}}
+				<button class="btn btn-small btn-success ts-playlist-update" {{action "update" this}}>Update Playlist</button>
+			{{else}}
+				<button class="btn btn-small ts-playlist-rename" {{action "edit" this}}>Rename Playlist</button>
+			{{/if}}
+			<button class="btn btn-small ts-playlist-delete" {{action "delete" this}}><i class="icon-trash text--normal"></i> Delete Playlist</button>
+		</div>
+    </div>
+
+    {{partial 'playlists/social_buttons'}}
+
+    <div class="tabs-layout">
+        <div class="tab-content tabs-layout__content">
+            {{partial 'playlists/resources'}}
+        </div>
+    </div>
+</div>

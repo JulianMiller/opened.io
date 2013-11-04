@@ -1,0 +1,11 @@
+<ul class="list__blocks">
+    {{#each item in controller}}
+        <li class="list__blocks__item">
+            {{#link-to "playlist" item class="list__blocks__link" }}
+                <div class="list__blocks__header">
+                    <h2 {{bind-attr name=item.name}} class="list__blocks__title ts-playlist-list-item">{{ truncate item.name len=30 }}</h2>
+                </div>
+            {{/link-to}}
+        </li>
+    {{/each}}
+</ul>

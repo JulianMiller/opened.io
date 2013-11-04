@@ -1,0 +1,19 @@
+<div class="page__header">
+    <h1 class="page__title">Courses</h1>
+	<div class="page__actions">
+		{{#link-to "courses.new" class="btn ts-newCourse-button"}}Create New Course{{/link-to}}
+	</div>
+</div>
+
+<div class="yui3-g yui3-cols">
+	<div class="yui3-u-7-24">
+		<div class="yui3-u-cnt">
+			{{partial "courses/list"}}
+		</div>
+	</div>
+    <div class="yui3-u-17-24">
+        <div class="yui3-u-cnt">
+			{{outlet}}
+		</div>
+	</div>
+</div>

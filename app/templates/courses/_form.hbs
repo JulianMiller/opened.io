@@ -1,0 +1,41 @@
+<form {{bind-attr class=":form-horizontal :form--compacted :ts-course-form"}} {{action "saveChanges" this on="submit"}}>
+    {{#if errorMessage}}
+        <div class="alert alert-error">{{errorMessage}}</div>
+    {{/if}}
+    <div class="control-group">
+        <label class="control-label">Course Name</label>
+        <div class="controls">
+            {{input value=title type="text" required="true" class="input-xlarge ts-newCourse-title"}}
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Grade</label>
+        <div class="controls">
+            {{view Ember.Select
+            	contentBinding=grades
+            	valueBinding=grade
+            	class="input-small ts-newCourse-grade"
+				prompt="Select"
+            }}
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Standard Group</label>
+        <div class="controls">
+			{{standards-selector
+				value=standard_group
+				selectValueText="Select"
+				changeValueText="Change"
+				startDataLevel=0
+				endDataLevel=0
+				navigationClick="selectStandardGroup"
+			}}
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Description</label>
+        <div class="controls">
+            {{textarea value=description cols="54" rows="2" class="input-block-level ts-newCourse-description"}}
+        </div>
+    </div>
+</form>

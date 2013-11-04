@@ -1,0 +1,72 @@
+@import "vars";
+@import "compass";
+
+$placeholderColor: #cccccc;
+input::-webkit-input-placeholder {
+	color:    $placeholderColor;
+}
+:-moz-placeholder {
+	color:    $placeholderColor;
+}
+::-moz-placeholder {
+	color:    $placeholderColor;
+}
+:-ms-input-placeholder {
+	color:    $placeholderColor;
+}
+
+/********************************************************
+
+			forms modifications
+
+********************************************************/
+
+.form--stand-alone{
+	padding-bottom: 20px;
+}
+
+
+/********************************************************
+
+			compacted form, used in course top
+
+********************************************************/
+.form--compacted{
+	margin-bottom: 15px;
+	input, textarea, select{
+		padding: 1px 3px;
+		border-radius: 2px;
+		height: auto;
+	}
+	.control-group{
+		margin-bottom: 7px;
+	}
+	.control-label{
+		font-size: 14px;
+		width: 105px;
+		line-height: 1;
+		color: #808080;
+		padding-top: 4px;
+		margin-bottom: 0;
+	}
+	.controls{
+		margin-left: 115px;
+	}
+}
+
+.form--compacted__bottom-actions{
+	margin-left: 115px;
+}
+
+
+/********************************************************
+
+			additional elements
+
+********************************************************/
+
+.form-horizontal__help{
+	padding-left: 180px;
+	padding-top: 10px;
+	border-top: 1px solid #e9e9e9;
+}

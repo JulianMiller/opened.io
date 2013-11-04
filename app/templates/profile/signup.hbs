@@ -1,0 +1,35 @@
+<!-- login page template /profile/login/ -->
+
+<div class="page__header">
+    <h1 class="page__title">Create New Account</h1>
+</div>
+<ul class="nav nav-tabs">
+    <li><a href="#" data-tab="teacher" {{action selectTab "teacher"}}>I'm a Teacher</a></li>
+    <li><a href="#" data-tab="student" {{action selectTab "student"}}>I'm a Student</a></li>
+</ul>
+
+<form class="form-horizontal form--stand-alone" {{action signup on="submit"}}>
+    {{#if errorMessage}}
+        <div class="alert alert-error">{{errorMessage}}</div>
+    {{/if}}
+
+    {{outlet tab}}
+
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" {{bind-attr class=":btn :btn-success :btn-large :ts-signup-signupButton isLoading:disabled"}}>
+                {{#if isLoading}}
+                    Creating...
+                {{else}}
+                    Create New Account
+                {{/if}}
+            </button>
+        </div>
+    </div>
+</form>
+
+<p class="form-horizontal__help">{{#linkTo "profile.signin"}}Already have an Account?{{/linkTo}}</p>
+
+
+
+

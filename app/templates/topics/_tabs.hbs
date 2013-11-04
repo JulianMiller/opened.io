@@ -1,0 +1,11 @@
+<div class="tabs-layout">
+    <ul class="nav nav-tabs tabs-layout__tabs">
+        {{#link-to "assigned" currentWhen="assigned" tagName="li" class="yui3-u-1-4"}}<a href="#assigned">Assigned Resources <span title="Assigned Resources" {{bind-attr class=":note-number isZeroAssigned:note-number--subtle"}}>{{resources.length}}</span></a>{{/link-to}}
+        {{#link-to "recommended" currentWhen="" tagName="li" class="yui3-u-1-4"}}<a href="#recommended">Recommended Resources</a>{{/link-to}}
+        {{#link-to "topic_playlist_resources" currentWhen="topic_playlist_resources" tagName="li" class="yui3-u-1-4"}}<a href="#from_playlist">Resources From Playlists</a>{{/link-to}}
+        {{#link-to "topic_search_resources" currentWhen="topic_search_resources" tagName="li" class="yui3-u-1-4"}}<a href="#search">Search By Standard</a>{{/link-to}}
+    </ul>
+    <div class="tab-content tabs-layout__content">
+        {{outlet}}
+    </div>
+</div>

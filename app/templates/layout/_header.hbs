@@ -1,0 +1,57 @@
+<header class="app-header">
+    <div class="app-header__row-secondary">
+        <div class="container clearfix">
+            <ul class="app-header-spe-links pull-left">
+                <li class="app-header-spe-links__item">
+                  {{#link-to "about" class="app-header-spe-links__link"}}About{{/link-to}}
+                </li>
+                <li class="app-header-spe-links__item">
+                  <a href="http://twitter.com/openedio" target="_blank" class="app-header-spe-links__link">Twitter</a>
+                </li>
+				<li class="app-header-spe-links__item">
+					<a href="https://www.facebook.com/OpenEdio" target="_blank" class="app-header-spe-links__link">Facebook</a>
+				</li>
+                <li class="app-header-spe-links__item">
+                  <a href="http://openedio.tumblr.com/" target="_blank" class="app-header-spe-links__link">Blog</a>
+                </li>
+            </ul>
+            <p class="app-header__summary">
+                Over 253,546 Resources, 3,368 Standards
+            </p>
+            <ul class="app-header-spe-links pull-right">
+                <li class="app-header-spe-links__item">{{#link-to 'help' class="app-header-spe-links__link" }}<i class="icon-question-sign"></i> Help{{/link-to}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="app-header__row-main">
+        <div class="container clearfix">
+            <a class="app-header__logo" href="/#">
+                <img class="app-header__logo__img" src="/images/logo_mini.png">
+
+                {{!<h1 class="app-header__slogan">Free, Aligned<br/> Educational Resources</h1>!}}
+            </a>
+
+            <div class="app-header__nav">
+				{{partial "layout/main_nav"}}
+            </div>
+
+			{{#if isSignedIn}}
+				<div class="navbar clearfix app-header__navbar app-header__navbar--secondary">
+					<ul class="nav">
+						<li>{{#link-to "profile.index" class="ts-profileButton" }}{{currentUser.email}}{{/link-to}}</li>
+						<li><a href="#/signout" class="ts-signoutButton" {{action "signout"}}>Sign Out</a></li>
+					</ul>
+				</div>
+			{{else}}
+				<div class="app-header__personalization">
+					<div class="btn-group">
+						{{#link-to "profile.signin" class="btn btn-small btn--darkbg"}}Sign In{{/link-to}}
+					</div>
+					<div class="btn-group">
+						{{#link-to "profile.signup" class="btn btn-success btn-small btn--darkbg"}}Sign Up{{/link-to}}
+					</div>
+				</div>
+			{{/if}}
+        </div>
+    </div>
+</header>

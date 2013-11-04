@@ -1,0 +1,18 @@
+<h1 class="title-style-h1">{{title}}</h1>
+<p>{{description}}</p>
+<hr/>
+
+<ul class="list__blocks">
+	{{#each topic in controller.topics}}
+        <li class="list__blocks__item ts-student-view-topic">
+            <h2 class="title-style-h2">{{topic.title}}</h2>
+            <p>{{topic.description}}</p>
+
+            <ul class="resource__list">
+				{{#each resource in topic.resources}}
+                    {{render "resources/show" resource}}
+				{{/each}}
+            </ul>
+        </li>
+	{{/each}}
+</ul>

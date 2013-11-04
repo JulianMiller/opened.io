@@ -1,0 +1,13 @@
+<i title="Reorder topics" class="icon-reorder dNd-indicator pull-left"></i>
+{{#link-to "topic" view.content class="list__blocks__link clearfix"}}
+	<span class="inline-col ts-topic-list-title span3">{{view.content.title}}</span>
+
+	<div class="inline-col list__blocks__desc span6 clearfix">
+		<span class="text--subtle">{{truncate view.content.description len=54}}</span>
+		<span title="Assigned Resources" {{bind-attr class=":note-number :pull-right view.content.isZeroAssigned:note-number--subtle"}}>{{view.content.resources.length}}</span>
+	</div>
+
+	<div class="inline-col list__blocks__desc span3">
+		{{standards-popover idents=view.content.standard_idents}}
+	</div>
+{{/link-to}}

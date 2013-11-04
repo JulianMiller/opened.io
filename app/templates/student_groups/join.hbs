@@ -1,0 +1,26 @@
+<div class="block--top-actions">
+    <h1 class="block--top-actions__title">
+        Join Class
+    </h1>
+    <form class="form-horizontal form--compacted">
+        {{#if errorMessage}}
+            <div class="alert alert-error">{{errorMessage}}</div>
+        {{/if}}
+        <div class="control-group">
+            <label class="control-label">Class Code</label>
+            <div class="controls">
+                {{input value=code type="text" autofocus="true" required="true" class="input-xlarge"}}
+            </div>
+        </div>
+    </form>
+    <div class="bottom-actions clearfix form--compacted__bottom-actions">
+        <button type="submit" {{action "joinClass"}} {{bind-attr class=":btn :btn-success isLoading:disabled" }}>
+            {{#if isLoading}}
+                Joining...
+            {{else}}
+                Join Class
+            {{/if}}
+        </button>
+        {{#link-to "student_groups" class="btn"}}Cancel{{/link-to}}
+    </div>
+</div>

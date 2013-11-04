@@ -1,0 +1,7 @@
+<li class="list__blocks__item">
+    {{#if isInPlaylist}}
+        <span class="list__blocks__link active"><i class="icon-check"></i> {{name}} ({{resourcesCount}})</span>
+    {{else}}
+         <a {{action "add" this }} class="list__blocks__link"><i class="icon-check-empty"></i> {{name}} ({{resourcesCount}})</a>
+    {{/if}}
+</li>

@@ -1,0 +1,119 @@
+@import "_vars";
+
+/*****************************************************
+
+		styles for blocks, and its variations
+
+*****************************************************/
+
+
+.block{
+	margin-bottom: 15px;
+}
+
+.block__header{
+	margin-bottom: 10px;
+}
+
+/*****************************************************
+
+		page elements, which goes in the top of pages
+
+		<div class="page__header">
+			<h1 class="page__title"></h1>
+			<div class="page__actions">
+				<a class="btn">Page actions</a>
+			</div>
+		</div>
+
+*****************************************************/
+
+.page__header{
+	margin-bottom: $block_margin_bottom + 5;
+}
+
+.page__title{
+	font-size: $page_title_font_size;
+	line-height: 1.2;
+	display: inline-block;
+	margin-right: 25px;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.page__actions{
+	display: inline;
+	margin-left: 25px;
+}
+
+/********************************************************
+
+			block with border, e.g. course view
+
+********************************************************/
+.block--top-actions{
+	background: #f8f8f8;
+	padding: 10px;
+	border-radius: 4px;
+	position: relative;
+}
+
+.top-actions{
+	background: #efefef;
+	padding: 6px 5px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: -44px;
+	left: 0;
+}
+
+.block--top-actions__title {
+	font-size: 15px;
+	line-height: 1.1;
+	margin: 0 0 9px 0;
+	span{
+		color:#999
+	}
+}
+
+.block--top-actions__subtitle{
+	font-size: 12px;
+	line-height: 1.3;
+	color: #999;
+	display: block;
+	margin-bottom: 6px;
+}
+
+/********************************************************
+
+	tabs layout for compact tabs visualization
+
+	<div class="tabs-layout">
+		<ul class="nav nav-tabs tabs-layout__tabs">
+			{{#linkTo "topics" tagName="li"}}<a href="#topics" {{bind-attr href="view.href"}}>Topics</a>{{/linkTo}}
+			{{#linkTo "classes" tagName="li"}}<a href="#classes" {{bind-attr href="view.href"}}>Classes</a>{{/linkTo}}
+		</ul>
+		<div class="tab-content tabs-layout__content">
+			{{outlet "topics" }}
+		</div>
+	</div>
+
+********************************************************/
+
+.tabs-layout__tabs {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+.tabs-layout__content{
+	background: #fff;
+	border: 1px solid #ddd;
+	padding: 10px 8px;
+	overflow: visible;
+}
+
+
+
+

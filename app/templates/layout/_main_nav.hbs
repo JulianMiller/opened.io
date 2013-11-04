@@ -1,0 +1,15 @@
+<div class="navbar app-header__navbar clearfix">
+    <ul class="nav">
+    	<li>{{#link-to "areas" currentWhen="areas"}}Directory{{/link-to}}</li>
+		  <li>{{#link-to "standard_groups" currentWhen="standard_groups"}}By Standard{{/link-to}}</li>
+		{{#if isSignedIn}}
+			<li>{{#link-to "playlists" currentWhen="playlists"}}Playlists{{/link-to}}</li>
+            {{#if currentUser.isTeacher}}
+			    <li>{{#link-to "courses" currentWhen="courses"}}Courses{{/link-to}}</li>
+            {{/if}}
+            {{#if currentUser.isStudent}}
+                <li>{{#link-to "student_groups" currentWhen="student_groups"}}Classes{{/link-to}}</li>
+            {{/if}}
+		{{/if}}
+    </ul>
+</div>

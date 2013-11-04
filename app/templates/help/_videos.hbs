@@ -1,0 +1,9 @@
+{{#unless content.isUpdating}}
+    <ul class="resource__list">
+    {{#each resource in controller}}
+      {{render "resources/show" resource}}
+    {{/each}}
+    </ul>
+{{else}}
+    {{partial "spinner"}} Loading Videos...
+{{/unless}}

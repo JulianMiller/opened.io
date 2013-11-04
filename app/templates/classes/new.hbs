@@ -1,0 +1,17 @@
+<div class="block--top-actions">
+    <h1 class="block--top-actions__title">
+        Add Class for <span>{{controllers.course.title}}</span>
+    </h1>
+    <!--<span class="block--top-actions__subtitle">You can edit the course here, add topics and classes. Click "Show student view" to see how your students will see the course.</span>-->
+    {{partial 'classes/form'}}
+    <div class="bottom-actions clearfix form--compacted__bottom-actions">
+        <button type="submit" {{action "create"}} {{bind-attr class=":btn :btn-success isLoading:disabled" }}>
+            {{#if isLoading}}
+                Adding Class...
+            {{else}}
+                Add Class
+            {{/if}}
+        </button>
+        {{#link-to "classes" class="btn"}}Cancel{{/link-to}}
+    </div>
+</div>

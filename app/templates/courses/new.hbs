@@ -1,0 +1,20 @@
+<div class="block--top-actions">
+    <h1 class="block--top-actions__title">
+        Create New Course
+    </h1>
+    <!--<span class="block--top-actions__subtitle">You can edit the course here, add topics and classes. Click "Show student view" to see how your students will see the course.</span>-->
+    {{partial 'courses/form'}}
+
+    <div class="bottom-actions clearfix form--compacted__bottom-actions">
+        <div>
+            <button type="submit" {{action "createRecord" this}} {{bind-attr class=":btn :btn-success :ts-newCourse-createButton isLoading:disabled"}}>
+                {{#if isLoading}}
+                    Creating Course...
+                {{else}}
+                    Create Course
+                {{/if}}
+            </button>
+            {{#link-to 'courses' class="btn"}}Cancel{{/link-to}}
+        </div>
+    </div>
+</div>

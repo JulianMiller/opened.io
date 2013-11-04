@@ -1,0 +1,23 @@
+<ul class="list__blocks">
+	{{#if content.isUpdating}}
+        <p class="msg msg--empty">
+            <i class="icon-spinner icon-spin"></i> Loading Classes...
+        </p>
+	{{else}}
+		{{#each group in controller}}
+			<li class="list__blocks__item ts-course-list-item">
+				{{#link-to "student_group" group.id class="list__blocks__link" currentWhen="student_group" }}
+					<div class="list__blocks__header">
+						<h2 class="list__blocks__title">{{group.name}}</h2>
+					</div>
+					<p class="list__blocks__desc">
+					  	Course: <strong>{{group.course_title}}</strong>
+					</p>
+					<p class="list__blocks__desc">
+					  	Teacher: <strong>{{group.teacher}}</strong>
+					</p>
+				{{/link-to}}
+			</li>
+		{{/each}}
+	{{/if}}
+</ul>

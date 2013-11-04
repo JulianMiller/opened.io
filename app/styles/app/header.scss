@@ -1,0 +1,71 @@
+@import "../vars";
+@import "../mixins";
+
+/********************************************************
+
+			styles for application header
+
+********************************************************/
+
+.app-header{
+	border-bottom: 1px solid #aa360f;
+	margin-bottom: $block_margin_bottom + 5;
+}
+
+.app-header__row-secondary{
+	background: $header_row_secondary_color;
+}
+
+.app-header__row-main{
+	#border-top: 1px solid #AA360F;
+	@include hor_gradient($header_first_color_stop, $header_second_color_stop);
+}
+
+.app-header__logo{
+	float: left;
+	padding: 5px 35px 5px 0;
+}
+
+.app-header__navbar{
+	font-size: 15px;
+	border-left: $header_inners_border_right;
+	margin-bottom: 0;
+	.nav{
+		margin:0;
+	}
+}
+
+.app-header__navbar--secondary{
+	font-size: 13px;
+	float: right;
+}
+
+.app-header__nav{
+	float: left;
+}
+
+.app-header__personalization{
+	padding: 7px 0;
+	float: right;
+}
+
+.app-header__logo__img{
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+}
+
+.app-header__row-secondary{
+	padding: 5px 0 4px;
+}
+
+.app-header__summary{
+	font: 12px Arial, sans-serif;
+	color: #ffece0;
+	display: inline;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	margin: 0;
+}

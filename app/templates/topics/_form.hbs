@@ -1,0 +1,32 @@
+<form class="form-horizontal form--compacted ts-topic-form" {{action "saveChanges" this on="submit"}}>
+    {{#if errorMessage}}
+        <div class="alert alert-error">{{errorMessage}}</div>
+    {{/if}}
+    <div class="control-group">
+        <label class="control-label">Topic Name</label>
+        <div class="controls">
+            {{input value=title type="text" required="true" class="input-xlarge ts-topic-title"}}
+        </div>
+    </div>
+	<div class="control-group">
+		<label class="control-label">Standard</label>
+		<div class="controls">
+			{{standards-selector
+				value=displayingStandard
+				parentValue=standardGroup
+				selectValueText="Select"
+				changeValueText="Change"
+				startDataLevel=1
+				endDataLevel=2
+				grade=grade
+				navigationClick="selectStandard"
+			}}
+		</div>
+	</div>
+    <div class="control-group">
+        <label class="control-label">Description</label>
+        <div class="controls">
+            {{textarea value=description cols="54" rows="2" class="input-block-level ts-topic-description"}}
+        </div>
+    </div>
+</form>

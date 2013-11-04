@@ -1,0 +1,13 @@
+{{#each item in controller}}
+	{{render "resources/show" item}}
+{{else}}
+    <div class="msg msg--empty">
+		<p>
+			There are no assigned resources for this topic.<br/>
+			{{#link-to "recommended"}}Go to Recommended tab{{/link-to}} to assign recommended resources.
+		</p>
+		<!--<p>
+			Alternatively you can {{#link-to}}search and assign{{/link-to}} other resources manually.
+		</p>-->
+	</div>
+{{/each}}

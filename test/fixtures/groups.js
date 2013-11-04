@@ -1,0 +1,1 @@
+Openedui.Group.FIXTURES = []

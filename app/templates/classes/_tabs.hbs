@@ -1,0 +1,8 @@
+<div class="tabs-layout">
+    <ul class="nav nav-tabs tabs-layout__tabs">
+        <li class="active"><a>Students <span title="Number of students" {{bind-attr class=":note-number isZeroAssigned:note-number--subtle"}}>{{students.length}}</span></a></li>
+    </ul>
+    <div class="tab-content tabs-layout__content">
+        {{partial "classes/students"}}
+    </div>
+</div>

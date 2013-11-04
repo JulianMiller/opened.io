@@ -1,0 +1,15 @@
+<div class="msg">
+	<i class="icon-info-sign text--large"></i> To improve quality of recommendation please fill in topic title and description.
+</div>
+
+{{#each item in controller}}
+	{{render "resources/show" item}}
+{{else}}
+    <p class="msg msg--empty">
+	   {{#if isLoading}}
+		   <i class="icon-spinner icon-spin"></i> Loading Recommendations...
+	   {{else}}
+           There are no recommended resources for this topic
+	   {{/if}}
+	</p>
+{{/each}}

@@ -1,0 +1,26 @@
+{{#with controllers.resources}}
+<ul class="inline">
+  <li>
+    <label id="types-filter" class="select">
+      {{view Ember.Select 
+        classNames="input-medium" 
+        contentBinding="Openedui.Resource.resource_types"
+        valueBinding="controllers.search.selectedType"
+        optionLabelPath="content.name"
+        optionValuePath="content.value"
+        prompt="All Resources"}}
+    </label>
+  </li>
+  <li>
+    <label id="contributions-filter" class="select">
+      {{view Ember.Select 
+        classNames="input-medium" 
+        contentBinding="controllers.search.contributions"
+        valueBinding="controllers.search.selectedContribution"
+        optionLabelPath="content.title"
+        optionValuePath="content.title"
+        prompt="All Sources"}}
+    </label>
+  </li>
+</ul>
+{{/with}}

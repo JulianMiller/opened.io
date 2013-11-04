@@ -1,0 +1,1 @@
+Openedui.AreasController = Ember.ArrayController.extend()

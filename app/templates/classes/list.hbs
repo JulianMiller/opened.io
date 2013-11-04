@@ -1,0 +1,24 @@
+<ul class="list__blocks">
+	{{#each item in controller}}
+		<li class="list__blocks__item">
+            {{#link-to "class" item class="list__blocks__link" }}
+				<div class="clearfix">
+					<span class="inline-col span3">{{item.name}}</span>
+
+					<span class="inline-col list__blocks__desc span6 clearfix">
+						{{item.code}}
+                        <span title="Number of students" {{bind-attr class=":inline-col :pull-right :note-number item.isZeroAssigned:note-number--subtle"}}>{{item.students.length}}</span>
+					</span>
+
+				</div>
+			{{/link-to}}
+		</li>
+	{{else}}
+		<div class="msg msg--empty">
+			<p>
+            	Once you have defined the topics in your course you can share it with a particular group
+				of students (a class). You can teach the same course to more than one class by {{#link-to "classes.new"}}creating more classes{{/link-to}}
+			</p>
+		</div>
+	{{/each}}
+</ul>

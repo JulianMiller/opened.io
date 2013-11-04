@@ -1,0 +1,37 @@
+@import "../vars";
+@import "../mixins";
+
+.help__faq dt {
+	color: #dd4814;
+	line-height: 1.3;
+	font-weight: normal;
+	margin: 5px 0;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+		color: #97310e;
+	}
+}
+
+.help__faq dd{
+	padding: 10px 0;
+}
+
+.help__faq .active {
+	color: #97310e;
+}
+
+
+.help__videos {
+	margin-bottom: 35px;
+}
+
+.help__videos .caption {
+	text-align: center;
+}
+
+body .modal {
+    width: 595px;
+
+}

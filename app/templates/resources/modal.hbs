@@ -1,0 +1,9 @@
+<div {{bind-attr id="id"}} class="popup">
+  <div class="popup__header clearfix">
+    <h1 class="popup__title title-style-h3 pull-left">{{title}}</h1>
+    <button {{action "closeModal"}} class="btn btn-small popup__close ts-resource-modal-close">Close</button>
+  </div>
+  <div class="popup__content">
+    {{partial "resources/embedded_content"}}
+  </div>
+</div>

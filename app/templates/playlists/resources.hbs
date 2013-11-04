@@ -1,0 +1,7 @@
+<ul class="resource__list">
+{{#each playlist_resources}}
+    {{render "resources/show" resource}}
+{{else}}
+    <p class="msg msg--empty">Search for resources and add them to this playlist</p>
+{{/each}}
+</ul>

@@ -1,0 +1,8 @@
+{{#link-to 'categories' controllers.standard_group}}<i class="icon-arrow-left"></i> Back to {{controllers.standard_group.name}}{{/link-to}}
+<h4>{{controllers.category.title}}</h4>
+<ul class="nav nav-list">
+  {{#each standard in controller}}
+    {{partial "standards/show"}}
+  {{/each}}
+</ul>
+  

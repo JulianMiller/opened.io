@@ -1,0 +1,49 @@
+{{#if controllers.topic.displayingStandard.title}}
+    <form class="form-horizontal form--compacted msg" {{action "searchForm" on="submit"}}>
+		<div class="control-group">
+            <label class="control-label">Standard</label>
+			<div class="controls">
+				{{standards-selector
+					tagName="span"
+					value=displayingStandard
+					parentValue=controllers.topic.standardGroup
+					selectValueText="Select"
+					changeValueText="Change"
+					startDataLevel=1
+					targetDataLevel=2
+					navigationClick="selectStandard"
+				}}
+			</div>
+		</div>
+		<div class="control-group">
+            <label class="control-label">Keywords</label>
+			<div class="controls">
+				{{input
+					value=descriptive
+					type="text"
+					class="input-xxlarge"
+					autofocus="true"
+					placeholder="quadratic equations, Latin affixes, photosynthesis"
+				}}
+                <button type="submit" class="btn btn-small"><i class="icon-search"></i> Search</button>
+			</div>
+		</div>
+	</form>
+
+	  {{#each item in controller}}
+		  {{render "resources/show" item}}
+	  {{else}}
+          <p class="msg msg--empty">
+			  {{#if isLoading}}
+                  <i class="icon-spinner icon-spin"></i> Loading Resources...
+			  {{else}}
+                  There are no resources for given criteria
+			  {{/if}}
+          </p>
+	  {{/each}}
+
+{{else}}
+    <div class="msg msg--empty">
+         Please select a standard for the topic first
+    </div>
+{{/if}}

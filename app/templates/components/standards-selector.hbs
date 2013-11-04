@@ -1,0 +1,41 @@
+
+<span {{action "select"}}>
+	{{value.title}}
+</span>
+
+<a {{action "select"}} class="control-link text--small" href="#">
+	{{#if value.title}}
+		{{changeValueText}}
+	{{else}}
+		{{selectValueText}}
+	{{/if}}
+	<i {{bind-attr class="open:icon-caret-up:icon-caret-down"}}></i>
+</a>
+
+{{#if open}}
+	<div class="dd-content">
+		<div class="dd-content__header clearfix">
+			{{#unless isLoading}}
+				{{#if isBackLink}}<span class="pull-left btn btn-mini btn-inverse input-mini" {{action "back"}}><i class="icon-arrow-left"></i> Back</span>{{/if}}
+				{{#if dialogTitle}}<span class="dd-content__header__title pull-left">{{dialogTitle}}</span>{{/if}}
+			{{/unless}}
+			{{#if isLoading}}<i class="pull-left icon-spinner icon-spin"></i>{{/if}}
+			<span {{action "select"}} class="dd-content__header__btn-close pull-right">×</span>
+		</div>
+        <ul class="dd-content__list">
+			{{#each item in data}}
+                <li class="dd-content__item">
+                    <a {{action "navigationClick" item}} {{bind-attr href=item.id}} class="dd-content__link">
+						{{#if item.identifier}}
+							<!-- DON'T BREAK THE LINE BELOW, done on purpose of removing word-breaks before counters -->
+                         	<span class="text--abbr">{{item.identifier}}</span> {{item.title}}{{else}}{{item.title}}{{/if}}&nbsp;{{#if item.count}}<span class="text--subtle">({{item.format_count}})</span>{{/if}}
+					</a>
+                </li>
+			{{/each}}
+        </ul>
+	</div>
+{{/if}}
+
+
+
+

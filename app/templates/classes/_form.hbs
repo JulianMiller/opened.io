@@ -1,0 +1,19 @@
+<form class="form-horizontal form--compacted">
+    {{#if errorMessage}}
+        <div class="alert alert-error">{{errorMessage}}</div>
+    {{/if}}
+    <div class="control-group">
+        <label class="control-label">Class Name</label>
+        <div class="controls">
+            {{input value=name type="text" autofocus="true" required="true" class="input-xlarge"}}
+        </div>
+    </div>
+    {{#unless isNew}}
+        <div class="control-group">
+            <label class="control-label">Class Code</label>
+            <div class="controls">
+                <strong>{{code}}</strong>
+            </div>
+        </div>
+    {{/unless}}
+</form>

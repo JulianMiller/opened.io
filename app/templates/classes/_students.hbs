@@ -1,0 +1,13 @@
+<ul class="list__blocks">
+    {{#each item in students}}
+        <li class="list__blocks__item">
+            <div class="clearfix">
+            	<span class="inline-col span4">{{item.full_name}}</span>
+                <div class="inline-col list__blocks__desc span5 text--subtle"></div>
+                 <span class="inline-col span4">{{item.email}}</span>
+            </div>
+        </li>
+    {{else}}
+        <p class="msg msg--empty">Please give your students the class code above. Once the students sign up they will show up here.</p>
+    {{/each}}
+</ul>

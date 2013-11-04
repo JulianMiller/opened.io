@@ -1,0 +1,39 @@
+<div class="control-group">
+    <label class="control-label">Email*</label>
+    <div class="controls">
+        {{input value=email type="email" autofocus="true" class="ts-signup-email" required="true"}}
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Password*</label>
+    <div class="controls">
+        {{input value=password type="password" class="ts-signup-password" required="true"}}
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Password Confirmation*</label>
+    <div class="controls">
+        {{input value=password_confirmation type="password" class="ts-signup-passwordConfirmation" required="true"}}
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Title</label>
+    <div class="controls">
+        {{view Ember.Select valueBinding=title  class="ts-signup-titles"
+        contentBinding="Openedui.User.titles"
+        prompt="Select"
+        }}
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">First name*</label>
+    <div class="controls">
+        {{input value=first_name type="text" required="true" class="ts-signup-firstName"}}
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Last name*</label>
+    <div class="controls">
+        {{input value=last_name type="text" required="true" class="ts-signup-lastName"}}
+    </div>
+</div>
